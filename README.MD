@@ -1,7 +1,10 @@
 ## Almundo API
 
+1 - Levantar la base de datos:
+`mongod`
 
-
+2 - Cuando el servicio esta corriendo importar el dataset con el siguiente comando de mongodb. * Hay que estar parado en el root del proyecto.
+`mongoimport --db almundo_hotels --collection hotels --drop --file dataset.json`
 
 
 
