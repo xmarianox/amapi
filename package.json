@@ -5,6 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/xmarianox/amapi.git",
   "scripts": {
+    "start_database": "mongod",
+    "import_database": "mongoimport --db almundo_hotels --collection hotels --drop --file dataset.json",
     "dev": "nodemon server.js"
   },
   "author": "Mariano Molina",

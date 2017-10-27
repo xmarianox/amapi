@@ -22,17 +22,17 @@ module.exports = (app, db) => {
         if (limit !== null && offset !== null) {
             getHotelsByLimit(db, limit, offset, (error, data) => {
                 if (error) {
-                    console.log(`Error: ${error}`);
+                    // console.log(`Error: ${error}`);
                     res.json({ 'error': error });
                 } else {
-                    console.log(`Data: ${data}`);
+                    // console.log(`Data: ${data}`);
                     res.json({ 'hotels': data })
                 }
             });
         }
     });
 
-    app.get('hotels_search', (req, res) => {
+    app.get('/hotels_search', (req, res) => {
         const hotelName = req.query.name;
 
         if (hotelName !== null) {

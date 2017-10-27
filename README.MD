@@ -1,15 +1,22 @@
-## Almundo API
+# Almundo API
 
-1 - Levantar la base de datos:
-`mongod`
+Asegurarse de instalar todas las dependencias del proyecto corriendo:
+`npm install`
 
-2 - Cuando el servicio esta corriendo importar el dataset con el siguiente comando de mongodb. * Hay que estar parado en el root del proyecto.
-`mongoimport --db almundo_hotels --collection hotels --drop --file dataset.json`
+## Inicial el proyecto
+1 - Iniciar el servidor de base de datos con el siguiente comando:
+`npm run database`
+
+2 - En otra ventana del terminal cuando el servicio `mongod` esta corriendo importar el dataset con el siguiente comando de mongodb. * Hay que estar parado en el root del proyecto.
+`npm run import_database`
+
+3 - Una vez importado el dataset podemos iniciar la api con el comando:
+`npm run dev`
+
+## Metodos soportados
+
+GET `/hotels` retorna un listado de hoteles con un `limit` y `offset` para el paginado.
+
+GET `/hotels_search` búsca el item por `name`
 
 
-
-## Ejemplo
-https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2
-
-## Ejemplo de llamada
-`https://almundo.com.ar/hotels/async/1324298/allresult?date=2017-11-06,2017-11-17&rooms=2&type=CITY&limit=20`
